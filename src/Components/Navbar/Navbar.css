@@ -1,0 +1,22 @@
+@media only screen and (min-width: 769px) { 
+    .logoMobile{display:none}
+}
+
+@media only screen and (max-width: 769px) { 
+    .logoDesktop{display:none}
+}
+
+.header_right > a > .MuiSvgIcon-root {
+    font-size: 20px;
+    margin-right: 12px;
+    color: black
+ }
+
+ .button {
+    text-shadow: '1px 1px 1px gray';
+    color: black;
+    
+ }
+.button:hover{
+    color: white;
+}

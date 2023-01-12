@@ -1,0 +1,36 @@
+.hover01 img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.hover01 svg {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	
+}
+.hover01:hover svg {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+@media (min-width: 700px) {
+    .icon {
+      width: 100px;
+	  margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .icon {
+		width: 70px;
+		
+    }
+  }
