@@ -18,6 +18,12 @@
   }
 }
 
+@media (max-width: 769px) {
+  .consultasText {
+   width: 80%;
+  }
+}
+
 @media (min-width: 769px) {
     .iconosConsultas {
       display: flex;
@@ -34,6 +40,19 @@
       padding-left: 20px;
       padding-right: 20px;
       justify-content: center;
+      padding-top: 30px;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .iconosConsultasDos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      justify-content: center;
+      padding-top: 0;
     }
   }
 

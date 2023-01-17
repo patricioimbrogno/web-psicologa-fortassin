@@ -21,18 +21,18 @@ const About = () => {
         item
         xs={12}
         sm={6}
-        sx={{ mt: "2%"}}
+        sx={{ mt: "5%"}}
         container
         justifyContent="center"
       >
         <img src={ProfileImage} className="profileImage"></img>
       </Grid>
 
-      <Grid item xs={12} sm={6} sx={{ mt: "5%" }} className="bio">
+      <Grid item xs={12} sm={6} sx={{ mt: "5%", borderLeft: '8px solid #f9ac85' }} className="bio">
         <Grid container display='flex' flexDirection='column' alignItems='center'>
           <Typography
             sx={{ color: "#545454" }}
-            align="justify"
+            align="center"
             variant="subtitle2"
             className="blockquote"
           >
@@ -44,7 +44,7 @@ const About = () => {
 
           <Typography
             sx={{ color: "#545454" }}
-            align="justify"
+            align="center"
             variant="subtitle2"
             className={`content ${toggledClass} otro-blockquote`}
           >

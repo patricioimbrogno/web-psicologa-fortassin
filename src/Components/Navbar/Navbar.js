@@ -1,21 +1,25 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import { Grid } from "@mui/material";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
+import {
+  AppBar,
+  Box,
+  Grid,
+  MenuList,
+  Menu,
+  Container,
+  Button,
+  MenuItem,
+  ListItemText,
+} from "@mui/material";
+
 import resumeData from "../../Utils/resumeData";
 import Logo from "../../Utils/logofiorella.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import Doctoralia from "../../Utils/Doctoralia";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -35,7 +39,13 @@ function Navbar() {
     >
       <Container>
         <Toolbar>
-          <Box sx={{ display: { xs: "flex", md: "none" }, flexDirection: 'row', justifyContent:'space-between' }}>
+          <Box
+            sx={{
+              display: { xs: "flex", md: "none" },
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -64,34 +74,42 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <AnchorLink href="#sobremi" style={{ textDecoration: "none" }}>
-              <MenuItem>
-                <Typography sx={{ color: "black" }} textAlign="center">
-                  Sobre mí
-                </Typography>
-              </MenuItem>
-              </AnchorLink>
-              <AnchorLink href="#consultas" style={{ textDecoration: "none" }}>
-              <MenuItem>
-                <Typography sx={{ color: "black" }} textAlign="center">
-                  Consultas psicológicas
-                </Typography>
-              </MenuItem>
-              </AnchorLink>
-              <AnchorLink href="#evaluaciones" style={{ textDecoration: "none" }}>
-              <MenuItem>
-                <Typography sx={{ color: "black" }} textAlign="center">
-                  Evaluaciones
-                </Typography>
-              </MenuItem>
-              </AnchorLink>
-              <AnchorLink href="#contacto" style={{ textDecoration: "none" }}>
-              <MenuItem>
-                <Typography sx={{ color: "black" }} textAlign="center">
-                  Contacto
-                </Typography>
-              </MenuItem>
-              </AnchorLink>
+              <MenuList>
+                <AnchorLink href="#sobremi" style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <ListItemText sx={{ color: "black" }} textAlign="center">
+                      Sobre mí
+                    </ListItemText>
+                  </MenuItem>
+                </AnchorLink>
+                <AnchorLink
+                  href="#consultas"
+                  style={{ textDecoration: "none" }}
+                >
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <ListItemText sx={{ color: "black" }} textAlign="center">
+                      Consultas psicológicas
+                    </ListItemText>
+                  </MenuItem>
+                </AnchorLink>
+                <AnchorLink
+                  href="#evaluaciones"
+                  style={{ textDecoration: "none" }}
+                >
+                  <MenuItem onClick={handleCloseNavMenu} autoFocus>
+                    <ListItemText sx={{ color: "black" }} textAlign="center">
+                      Evaluaciones
+                    </ListItemText>
+                  </MenuItem>
+                </AnchorLink>
+                <AnchorLink href="#contacto" style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <ListItemText sx={{ color: "black" }} textAlign="center">
+                      Contacto
+                    </ListItemText>
+                  </MenuItem>
+                </AnchorLink>
+              </MenuList>
             </Menu>
             <img
               className="logoMobile"
@@ -184,6 +202,17 @@ function Navbar() {
                   {resumeData.socials[key].icon}
                 </a>
               ))}
+              <a
+                href="https://www.doctoraliar.com/fiorella-fortassin/psicologo/capital-federal"
+                target="_blank"
+              >
+                <Doctoralia
+                  width={"19"}
+                  height={"20"}
+                  color={"#f9ac85"}
+                  colorBack={"#000000"}
+                />
+              </a>
             </Grid>
           </Grid>
         </Toolbar>

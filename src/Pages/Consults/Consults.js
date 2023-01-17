@@ -51,6 +51,7 @@ const Consults = () => {
           sx={{ color: "#545454", pt: "20px" }}
           align="center"
           variant="h6"
+          className="consultasText"
         >
           Consulta psicológica para niños con desafíos en el neurodesarrollo y
           orientación a padres, cómo también cuestiones emocionales y de
@@ -68,7 +69,7 @@ const Consults = () => {
             alignItems="center"
           >
             <Typography
-              variant="subtitle1"
+              variant="subtitle2"
               sx={{ color: "#545454", paddingLeft:'10px', paddingRight:'10px' }}
               align="center"
               className="centro"
@@ -80,7 +81,7 @@ const Consults = () => {
           </Grid>
         ))}
       </Grid>
-      <Grid item xs={12} sm={12} className="iconosConsultas">
+      <Grid item xs={12} sm={12} className="iconosConsultasDos iconosConsultas">
         {Object.keys(resumeData.consultsTwo).map((key) => (
           <Grid
             container
@@ -90,7 +91,7 @@ const Consults = () => {
             alignItems="center"
           >
             <Typography
-              variant="subtitle1"
+              variant="subtitle2"
               sx={{ color: "#545454" }}
               align="center"
               className="centro"

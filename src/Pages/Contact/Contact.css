@@ -1,17 +1,24 @@
+@media (max-width: 769px) {
+  .textContact {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
 
+@media (max-width: 769px) {
+  .form {
+    padding-right: 16%;
+    align-content: center;
+  }
+}
+.socials {
+  align-items: center;
+}
+.socials > a {
+  margin-left: 40px;
+}
 
-    @media (max-width: 769px) {
-        .textContact {
-          padding-left: 7%;
-          padding-right: 7%;
-        }
-      }
-    
-
-      @media (max-width: 769px) {
-        .form{
-         
-          padding-right: 16%;
-          align-content: center;
-        }
-      }
+.socials > a > .MuiSvgIcon-root {
+  font-size: 40px;
+  color: #f9ac85;
+}

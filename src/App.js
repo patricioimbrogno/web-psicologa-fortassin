@@ -6,11 +6,20 @@ import Consults from "./Pages/Consults/Consults";
 import Home from "./Pages/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import About from "./Pages/About/About";
+import { createTheme, ThemeProvider } from '@mui/material';
 
 
 function App() {
+  const theme = createTheme({
+    typography: {
+      fontFamily: [
+        'Poppins',
+      ].join(','),
+    },});
+
   return (
     <>
+    <ThemeProvider theme={theme}>
       <Navbar />
       <Home />
       <About />
@@ -18,6 +27,7 @@ function App() {
       <Evaluations />
       <Contact />
       <Footer />
+      </ThemeProvider>
     </>
   );
 }

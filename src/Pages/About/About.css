@@ -26,7 +26,8 @@
 
 @media (min-width: 769px) {
   .profileImage {
-    width: 60%;
+    width: 400px;
+    height: 400px;
     border: 10px solid #f9ac85;
     border-radius: 50%;
   }
@@ -87,48 +88,88 @@
   font-size: 1em;
   width:100%;
   margin:50px auto;
-  font-family:Open Sans;
   font-style:normal;
   color: #555555;
   padding:1em 15px 1.2em 20px;
-  border-left:8px solid #f9ac85 ;
+
   line-height:1.4;
   position: relative;
  
 }}
 @media (min-width: 769px) {
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
 .otro-blockquote{
   font-size: 1em;
-  width:100%;
+  width:75%;
+  align-items: left;
   margin:50px auto;
-  font-family:Open Sans;
   font-style:italic;
   color: #555555;
   padding:1em 15px 1.2em 20px;
-  border-left:8px solid #f9ac85 ;
+ 
   line-height:1.4;
   position: relative;
   
-}}
-@media (min-width: 769px) {
-.otro-blockquote::before{
-  font-family:Arial;
-  content: "\275D";
-  color:#f9ac85;
-  font-size:4em;
-  position: absolute;
-  left: 10px;
-  top:-10px;
-}}
-@media (min-width: 769px) {
-.otro-blockquote::after{
-  font-family:Arial;
-  content: "\275E";
-  color:#f9ac85;
-  font-size:4em;
-  position: absolute;
-  right: 430px;
   
 }}
 
+@media (max-width: 769px) {
+
+  .otro-blockquote{
+    font-size: 1em;
+    width:95%;
+    align-items: left;
+    margin:50px auto;
+    font-style:italic;
+    color: #555555;
+    padding:1em 15px 1.2em 10px;
+   
+    line-height:1.4;
+    position: relative;
+    
+    
+  }}
+
+
+@media (min-width: 769px) {
+.otro-blockquote::before{
+  font-family:'Times New Roman', Times, serif;
+  content: "\201C";
+  color:#f9ac85;
+  font-size:7em;
+  position: absolute;
+  left: -30px;
+  top:-30px;
+}}
+@media (min-width: 769px) {
+.otro-blockquote::after{
+  font-family:'Times New Roman', Times, serif;
+  content: "\201E";
+  color:#f9ac85;
+  font-size:7em;
+  position: absolute;
+  top:220px;
+  
+}}
+
+
+@media (max-width: 769px) {
+  .otro-blockquote::before{
+    font-family:'Times New Roman', Times, serif;
+    content: "\201C";
+    color:#f9ac85;
+    font-size:7em;
+    position: absolute;
+    left: -40px;
+    top:-10px;
+  }}
+  @media (max-width: 769px) {
+  .otro-blockquote::after{
+    font-family:'Times New Roman', Times, serif;
+    content: "\201E";
+    color:#f9ac85;
+    font-size:7em;
+    position: absolute;
+    top:350px;
+    
+  }}
