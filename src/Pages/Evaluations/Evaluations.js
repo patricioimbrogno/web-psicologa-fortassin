@@ -52,7 +52,7 @@ export const Evaluations = () => {
         <img width='10%' src={stars} />
         </Grid>
       </Grid>
-      <Grid container display="flex" flexDirection="row" className='evaluationsText'>
+      <Grid container display="flex" flexDirection="row" className='evaluationsContent'>
         <Grid
           item
           xs={12}
@@ -72,6 +72,7 @@ export const Evaluations = () => {
             sx={{ color: "#545454", pr: "50px", mt: "30px", mb: "20px" }}
             align="center"
             variant="h6"
+            className="evaluationsText"
           >
             Realizo evaluaciones para niños con sospecha de trastorno del
             espectro autista mediante test estandarizados Ados-2 y Adi-R.

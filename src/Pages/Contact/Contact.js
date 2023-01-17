@@ -102,7 +102,7 @@ const Contact = () => {
                 Completá el formulario y te responderé a la brevedad
               </Typography>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} className='form'>
               <Grid
                 container
                 spacing={3}
@@ -177,6 +177,7 @@ const Contact = () => {
                     variant="contained"
                     sx={{
                       backgroundColor: "#f9ac85",
+                      mr:'4px',
                       color: "white",
                       boxShadow: "1px 1px 2px 2px rgba(0,0,0,0.2)",
                       "&:hover": {
@@ -193,12 +194,12 @@ const Contact = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={6} container justifyContent="center" >
+        <Grid item xs={12} md={6} container justifyContent="center" >
           <Grid container display="flex" flexDirection="column" alignItems="center" justifyContent='center'>
             <Typography sx={{ color: "#545454", mb: 2 }} variant="h5" className="centro">
               Consultorio
             </Typography>
-            <Typography sx={{ color: "#545454", mb: 5 }} variant="subtitle2">
+            <Typography sx={{ color: "#545454", mb: 5 }} variant="subtitle2" align="center" className="textContact">
               Atención presencial en el barrio de Recoleta, Buenos Aires
             </Typography>
           </Grid>

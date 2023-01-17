@@ -12,13 +12,13 @@ import "./Consults.css";
 const Consults = () => {
   return (
     <Grid
-      sx={{ backgroundColor: "#ffeb9b" }}
+      sx={{ backgroundColor: "#ffeb9b"}}
       container
       display="flex"
       flexDirection="row"
       id="consultas"
       JustifyContent="center"
-      className='shapedividers_com-7944'
+      className="shapedividers_com-7944"
     >
       <Grid
         item
@@ -30,41 +30,35 @@ const Consults = () => {
         className="consultas"
       >
         <Fade bottom>
-          <Grid item  display='flex' flexDirection='column' alignItems='center'>
+          <Grid item display="flex" flexDirection="column" alignItems="center">
             <Typography
               variant="h4"
-              align='center'
+              align="center"
               sx={{
                 color: "#737373",
                 mt: "50px",
               }}
+              className='centro'
             >
               CONSULTAS PSICOLÓGICAS
             </Typography>
 
-            <Separator color='#f9ac85' />
+            <Separator color="#f9ac85" />
           </Grid>
         </Fade>
 
         <Typography
-          sx={{ color: "#545454"}}
+          sx={{ color: "#545454", pt: "20px" }}
           align="center"
           variant="h6"
-          
         >
           Consulta psicológica para niños con desafíos en el neurodesarrollo y
           orientación a padres, cómo también cuestiones emocionales y de
           autoestima. 
         </Typography>
       </Grid>
-     
-      <Grid
-        item
-        xs={12}
-        sm={12}
-        className='iconosConsultas'
-        sx={{ mt: "5%" }}
-      >
+
+      <Grid item xs={12} sm={12} className="iconosConsultas" sx={{ mt: "5%" }}>
         {Object.keys(resumeData.consultsOne).map((key) => (
           <Grid
             container
@@ -72,13 +66,13 @@ const Consults = () => {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            
           >
             <Typography
               variant="subtitle1"
-              sx={{ color: "#545454" }}
+              sx={{ color: "#545454", paddingLeft:'10px', paddingRight:'10px' }}
               align="center"
               className="centro"
+            
             >
               {resumeData.consultsOne[key].title}
             </Typography>
@@ -86,12 +80,7 @@ const Consults = () => {
           </Grid>
         ))}
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={12}
-        className='iconosConsultas'
-      >
+      <Grid item xs={12} sm={12} className="iconosConsultas">
         {Object.keys(resumeData.consultsTwo).map((key) => (
           <Grid
             container
@@ -112,26 +101,26 @@ const Consults = () => {
           </Grid>
         ))}
       </Grid>
-      <Grid item container xs={12} justifyContent='center'>
-                  <AnchorLink href='#contacto' style={{textDecoration:'none'}}><Button
-                    variant="contained"
-                    sx={{
-                      mb: '10px',
-                      mt: '10px',
-                      backgroundColor: "#f9ac85",
-                      color: "white",
-                      boxShadow: "1px 1px 2px 2px rgba(0,0,0,0.2)",
-                      "&:hover": {
-                        color: "white",
-                        backgroundColor: "#e09a77",
-                      },
-                    }}
-                    
-                  >
-                    Consultar
-                  </Button>
-                  </AnchorLink>
-                  </Grid>
+      <Grid item container xs={12} justifyContent="center">
+        <AnchorLink href="#contacto" style={{ textDecoration: "none" }}>
+          <Button
+            variant="contained"
+            sx={{
+              mb: "10px",
+              mt: "10px",
+              backgroundColor: "#f9ac85",
+              color: "white",
+              boxShadow: "1px 1px 2px 2px rgba(0,0,0,0.2)",
+              "&:hover": {
+                color: "white",
+                backgroundColor: "#e09a77",
+              },
+            }}
+          >
+            Consultar
+          </Button>
+        </AnchorLink>
+      </Grid>
     </Grid>
   );
 };

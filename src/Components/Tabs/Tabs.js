@@ -1,14 +1,13 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
-import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
+import {Box, Typography, Tab, Tabs, styled} from "@mui/material";
+
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+
+
 
   return (
     <div
@@ -43,13 +42,18 @@ function a11yProps(index) {
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
 
+  const styledTab = styled(Tab)({
+    height: '32px',
+    minHeight: '32px',
+});
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+    <Box sx={{ width: "100%",  }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider"  }}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -64,17 +68,19 @@ export default function BasicTabs() {
             "& button:hover": { color: "#f9ac85" },
             "& button:focus": { color: "#f9ac85" },
             "& button.Mui-selected": { color: "#f9ac85" },
+            pl:'30px'
+           
             
           }}
 
         >
-          <Tab label="Ados-2" {...a11yProps(0)} />
-          <Tab label="Adi-R" {...a11yProps(1)} />
-          <Tab className="MuiButtonBase-root" label="Pasos a seguir" {...a11yProps(2)} />
+          <Tab label="Ados-2" {...a11yProps(0)}/>
+          <Tab label="Adi-R" {...a11yProps(1)}/>
+          <Tab label="Pasos a seguir" {...a11yProps(2)}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Typography sx={{ color: "#545454" }}>
+        <Typography align="center" sx={{ color: "#545454" }}>
           La evaluación Ados-2 es un test estandarizado y semiestructurado que
           evalúa la comunicación, la interacción social y el juego, pudiéndose
           aplicar a personas de distintas edades y niveles de lenguaje a partir
@@ -82,7 +88,7 @@ export default function BasicTabs() {
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Typography sx={{ color: "#545454" }}>
+        <Typography align="center" sx={{ color: "#545454" }}>
           La evaluación Adi-R es una entrevista semi estructurada, dirigida a
           los padres o cuidadores de la persona con sospecha de autismo, sobre
           el historial del desarrollo, por ejemplo lenguaje/comunicación,
@@ -92,7 +98,7 @@ export default function BasicTabs() {
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Typography sx={{ color: "#545454" }}>
+        <Typography align="center" sx={{ color: "#545454" }}>
           La evaluación para el diagnóstico de autismo consiste en 4 encuentros:
         </Typography>
         <ol>

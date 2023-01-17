@@ -24,40 +24,111 @@
   }
 }
 
-
-@media (min-width: 700px) {
-.profileImage {
-  width: 60%;
-  border: 10px solid #f9ac85;
-  border-radius: 50%;
-}
-}
-
-@media (max-width: 700px) {
+@media (min-width: 769px) {
   .profileImage {
-    width: 40%;
+    width: 60%;
+    border: 10px solid #f9ac85;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 769px) {
+  .profileImage {
+    width: 70%;
     height: auto;
     border: 10px solid #f9ac85;
     border-radius: 50%;
   }
+}
+
+@media (min-width: 769px) {
+  .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 60px;
   }
+}
 
+@media (max-width: 769px) {
+  .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media (max-width: 769px) {
+.content {
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 0.1em;
+}
+}
+@media (max-width: 769px) {
+.content.collapsed {
+  overflow: hidden;
+  
+}}
+@media (max-width: 769px) {
+.content.expanded {
+  overflow: visible;
+  height: auto;
+}}
 
-  @media (min-width: 700px) {
-    .bio {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-right: 60px;
-    }
-    }
-    
-    @media (max-width: 700px) {
-      .bio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 30%;
-        padding-right: 30%;
-      }
-      }
+@media (min-width: 769px) {
+  button.hide {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+.blockquote {
+  font-size: 1em;
+  width:100%;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:normal;
+  color: #555555;
+  padding:1em 15px 1.2em 20px;
+  border-left:8px solid #f9ac85 ;
+  line-height:1.4;
+  position: relative;
+ 
+}}
+@media (min-width: 769px) {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+.otro-blockquote{
+  font-size: 1em;
+  width:100%;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:1em 15px 1.2em 20px;
+  border-left:8px solid #f9ac85 ;
+  line-height:1.4;
+  position: relative;
+  
+}}
+@media (min-width: 769px) {
+.otro-blockquote::before{
+  font-family:Arial;
+  content: "\275D";
+  color:#f9ac85;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}}
+@media (min-width: 769px) {
+.otro-blockquote::after{
+  font-family:Arial;
+  content: "\275E";
+  color:#f9ac85;
+  font-size:4em;
+  position: absolute;
+  right: 430px;
+  
+}}
+

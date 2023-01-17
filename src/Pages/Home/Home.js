@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import video from "../../Utils/videointro.mp4";
 import "./Home.css";
 
@@ -26,6 +26,7 @@ const Home = () => {
         loop
         autoPlay={"autoplay"}
         preLoad="auto"
+        className="video"
       >
         {" "}
       </video>
