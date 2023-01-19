@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { Grid, Typography, TextField, Button, styled } from "@mui/material";
+import { Grid, Typography, TextField, Button } from "@mui/material";
+import swal from "@sweetalert/with-react";
 import resumeData from "../../Utils/resumeData";
 import { send } from "emailjs-com";
-import Alert from "@mui/material/Alert";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
 import Map from "../../Components/Map/Map";
-import Collapse from "@mui/material/Collapse";
 import "../../Components/Divider/Divider.css";
 import Fade from "react-reveal/Fade";
 import Doctoralia from "../../Utils/Doctoralia";
@@ -20,58 +17,29 @@ const Contact = () => {
   };
 
   const [toSend, setToSend] = useState({ name: "", message: "", reply_to: "" });
-  const [open, setOpen] = React.useState(true);
-  const [alert, setAlert] = useState(false);
+
+
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    send("service_1s8gc0m", "template_ren1c8s", toSend, "ysAGGh-e1g1Jbmikf")
+    send("service_108lpfb", "template_n7cmmfq", toSend, "ysAGGh-e1g1Jbmikf")
       .then((response) => {
         console.log("success", response.status, response.text);
-        setAlert(true);
+        swal({
+          title: "¡Mensaje enviado con éxito!",
+        })
       })
       .catch((err) => {
         console.log("Failed..", err);
       });
   };
 
-  const CssTextField = styled(TextField)({
-    "& label.Mui-focused": {
-      color: "green",
-    },
-    "& .MuiOutlinedInput-root": {
-      "&.Mui-focused fieldset": {
-        borderColor: "green",
-      },
-    },
-  });
 
   return (
     <>
-      {alert && (
-        <Collapse in={open}>
-          <Alert
-            action={
-              <IconButton
-                aria-label="close"
-                color="inherit"
-                size="small"
-                onClick={() => {
-                  setOpen(false);
-                }}
-              >
-                <CloseIcon fontSize="inherit" />{" "}
-              </IconButton>
-            }
-            sx={{ mb: 2 }}
-          >
-            ¡Mensaje enviado con éxito!
-          </Alert>
-        </Collapse>
-      )}
       <Fade bottom>
         <Grid
           container
@@ -180,16 +148,21 @@ const Contact = () => {
                   </Grid>
                   <Grid
                     item
+                    display="flex"
+                    flexDirection="column"
                     container
                     xs={12}
-                    justifyContent="end"
+                    justifyContent="center"
+                    alignItems="end"
                     className="cont"
                   >
                     <Button
                       variant="contained"
                       sx={{
                         backgroundColor: "#f9ac85",
+                        width: "15%",
                         mr: "4px",
+                        mb: "5px",
                         color: "white",
                         boxShadow: "1px 1px 2px 2px rgba(0,0,0,0.2)",
                         "&:hover": {
@@ -233,6 +206,7 @@ const Contact = () => {
 
             <Map location={location} zoomLevel={17} />
           </Grid>
+
           <Grid
             item
             xs={12}

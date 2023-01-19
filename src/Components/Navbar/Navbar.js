@@ -205,6 +205,7 @@ function Navbar() {
               <a
                 href="https://www.doctoraliar.com/fiorella-fortassin/psicologo/capital-federal"
                 target="_blank"
+                rel="noreferrer"
               >
                 <Doctoralia
                   width={"19"}

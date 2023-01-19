@@ -25,7 +25,7 @@ const About = () => {
         container
         justifyContent="center"
       >
-        <img src={ProfileImage} className="profileImage"></img>
+        <img src={ProfileImage} alt='Fiorella Fortassin' className="profileImage"></img>
       </Grid>
 
       <Grid item xs={12} sm={6} sx={{ mt: "5%", borderLeft: '8px solid #f9ac85' }} className="bio">

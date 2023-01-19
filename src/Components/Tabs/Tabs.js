@@ -1,13 +1,10 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import {Box, Typography, Tab, Tabs, styled} from "@mui/material";
-
+import {Box, Typography, Tab, Tabs } from "@mui/material";
 
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
-
 
   return (
     <div
@@ -42,10 +39,6 @@ function a11yProps(index) {
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
 
-  const styledTab = styled(Tab)({
-    height: '32px',
-    minHeight: '32px',
-});
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
