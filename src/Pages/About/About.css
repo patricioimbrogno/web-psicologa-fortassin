@@ -42,7 +42,18 @@
   }
 }
 
+@media (min-width: 769px) {
+  .bio {
+    padding-right: 60px;
+  }
+}
 
+@media (max-width: 769px) {
+  .bio {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
 @media (max-width: 769px) {
 .content {
   overflow: hidden;
@@ -66,21 +77,8 @@
     display: none;
   }
 }
-@media (min-width: 769px) {
-.blockquote {
-  font-size: 1em;
-  width:100%;
-  margin:50px auto;
-  font-style:normal;
-  color: #555555;
-  padding:1em 15px 1.2em 20px;
 
-  line-height:1.4;
-  position: relative;
- 
-}}
 @media (min-width: 769px) {
-
 .otro-blockquote{
   font-size: 1em;
   width:75%;
@@ -89,15 +87,11 @@
   font-style:italic;
   color: #555555;
   padding:1em 15px 1.2em 20px;
- 
   line-height:1.4;
-  position: relative;
-  
-  
+  position: relative; 
 }}
 
 @media (max-width: 769px) {
-
   .otro-blockquote{
     font-size: 1em;
     width:95%;
@@ -105,12 +99,8 @@
     margin:50px auto;
     font-style:italic;
     color: #555555;
-    padding:1em 15px 1.2em 10px;
-   
     line-height:1.4;
     position: relative;
-    
-    
   }}
 
 
@@ -144,7 +134,7 @@
     font-size:7em;
     position: absolute;
     left: -40px;
-    top:-10px;
+    top:-50px;
   }}
   @media (max-width: 769px) {
   .otro-blockquote::after{
