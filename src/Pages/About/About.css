@@ -56,19 +56,19 @@
 }
 @media (max-width: 769px) {
 .content {
-  overflow: hidden;
+  display: none;
   line-height: 1.2em;
   height: 0.1em;
 }
 }
 @media (max-width: 769px) {
 .content.collapsed {
-  overflow: hidden;
+  display: none;
   
 }}
 @media (max-width: 769px) {
 .content.expanded {
-  overflow: visible;
+  display: flex;
   height: auto;
 }}
 
@@ -143,5 +143,6 @@
     font-size:7em;
     position: absolute;
     top:350px;
+    left: 250px;
     
   }}
