@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Typography, TextField, Button } from "@mui/material";
-import swal from "@sweetalert/with-react";
+import { Grid, Typography, TextField, Button, Alert } from "@mui/material";
 import resumeData from "../../Utils/resumeData";
 import { send } from "emailjs-com";
 import Map from "../../Components/Map/Map";
@@ -17,7 +16,7 @@ const Contact = () => {
   };
 
   const [toSend, setToSend] = useState({ name: "", message: "", reply_to: "" });
-
+  const [alert, setAlert] = useState(false);
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -28,15 +27,12 @@ const Contact = () => {
     send("service_108lpfb", "template_n7cmmfq", toSend, "ysAGGh-e1g1Jbmikf")
       .then((response) => {
         console.log("success", response.status, response.text);
-        swal({
-          title: "¡Mensaje enviado con éxito!",
-        })
+        setAlert(true);
       })
       .catch((err) => {
         console.log("Failed..", err);
       });
   };
-
 
   return (
     <>
@@ -147,33 +143,38 @@ const Contact = () => {
                     ></TextField>
                   </Grid>
                   <Grid
-                    item
-                    display="flex"
-                    flexDirection="column"
                     container
-                    xs={12}
-                    justifyContent="center"
-                    alignItems="end"
-                    className="cont"
+                    display="flex"
+                    flexDirection="row"
+                    justifyContent="space-around"
                   >
-                    <Button
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#f9ac85",
-                        width: "15%",
-                        mr: "4px",
-                        mb: "5px",
-                        color: "white",
-                        boxShadow: "1px 1px 2px 2px rgba(0,0,0,0.2)",
-                        "&:hover": {
+                     <Grid item xs={6} display='flex' justifyContent='start' sx={{pl:'30px',pt:'5px'}}>
+                      {alert && (
+                        <Alert severity="success">
+                          ¡Enviado!
+                        </Alert>
+                      )}
+                    </Grid>
+                    <Grid item xs={6} display='flex' justifyContent='end'>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#f9ac85",
+                          height:'35px',
+                          mt: '10px',
                           color: "white",
-                          backgroundColor: "#e09a77",
-                        },
-                      }}
-                      onClick={handleSubmit}
-                    >
-                      Enviar
-                    </Button>
+                          boxShadow: "1px 1px 2px 2px rgba(0,0,0,0.2)",
+                          "&:hover": {
+                            color: "white",
+                            backgroundColor: "#e09a77",
+                          },
+                        }}
+                        onClick={handleSubmit}
+                      >
+                        Enviar
+                      </Button>
+                    </Grid>
+                   
                   </Grid>
                 </Grid>
               </Grid>

@@ -7,8 +7,6 @@ import Learning from "./read-icon1.svg"
 import Habilities from "./habilidades.svg"
 import Heart from './heart.svg'
 import Mindfullness from './free_icon_1.svg'
-// import Doctoralia from './doctoralia.svg'
-import Doctoralia from "./Doctoralia";
 import './utils.css'
 import Icon from './Icon'
 
@@ -38,7 +36,7 @@ export default {
   consultsOne: [
     {
       title: "Trastorno del espectro autista",
-      icon: <div className="hover01 column"><figure><img className="icon" src={Autism} /></figure></div>,
+      icon: <div className="hover01 column"><figure><img className="icon" src={Autism} alt='austismo' /></figure></div>,
       
     },
     {
@@ -48,29 +46,29 @@ export default {
     },
     {
       title: "Trastorno del lenguaje",
-      icon: <div className="hover01 column"><figure><img className="icon" src={Language} /></figure></div>,
+      icon: <div className="hover01 column"><figure><img className="icon" src={Language} alt='lenguaje'/></figure></div>,
       
     },
     {
       title: "Trastornos del aprendizaje",
-      icon: <div className="hover01 column"><figure><img className="icon" src={Learning} /></figure></div>,
+      icon: <div className="hover01 column"><figure><img className="icon" src={Learning} alt='aprendizaje'/></figure></div>,
       
     },
   ],
   consultsTwo: [
     {
       title:  "Habilidades sociales",
-      icon: <div className="hover01 column"><figure><img className="icon" src={Habilities} /></figure></div>,
+      icon: <div className="hover01 column"><figure><img className="icon" src={Habilities} alt='habilidades'/></figure></div>,
       
     },
     {
       title: "Autoestima",
-      icon: <div className="hover01 column"><figure><img className="icon" src={Heart} /></figure></div>,
+      icon: <div className="hover01 column"><figure><img className="icon" src={Heart} alt='corazon'/></figure></div>,
       
     },
     {
       title: "Mindfullness para niños",
-      icon: <div className="hover01 column"><figure><img className="icon" src={Mindfullness} /></figure></div>,
+      icon: <div className="hover01 column"><figure><img className="icon" src={Mindfullness} alt='mindfullness'/></figure></div>,
       
     },
   ],

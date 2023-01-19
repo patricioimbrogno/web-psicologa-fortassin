@@ -4,7 +4,6 @@ import { Grid, Typography } from "@mui/material";
 import Tabs from "../../Components/Tabs/Tabs";
 import Separator from "../../Utils/Separator";
 import image from "../../Utils/consultorio.png";
-import separatorlogo from "../../Utils/seplgo.png";
 import "../../App.css";
 import "../../Components/Divider/Divider.css";
 import "./Evaluations.css";
@@ -49,7 +48,7 @@ export const Evaluations = () => {
           </Grid>
         </Fade>
         <Grid>
-        <img width='10%' src={stars} />
+        <img width='10%' src={stars} alt='stars'/>
         </Grid>
       </Grid>
       <Grid container display="flex" flexDirection="row" className='evaluationsContent'>
@@ -65,6 +64,7 @@ export const Evaluations = () => {
           <img
             className="evaluationsImage"
             src={image}
+            alt='evaluation'
           ></img></Fade>
         </Grid>
         <Grid item xs={12} sm={6} sx={{ mt: "2%", mb: "2%" }}>
