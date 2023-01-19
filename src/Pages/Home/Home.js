@@ -23,7 +23,6 @@ const Home = () => {
         src={video}
         width="50%"
         muted
-        loop
         autoPlay={"autoplay"}
         preLoad="auto"
         className="video"
