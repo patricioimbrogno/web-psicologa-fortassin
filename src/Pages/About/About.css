@@ -85,7 +85,7 @@
   align-items: left;
   font-style:italic;
   color: #555555;
-  padding:1em 15px 1.2em 20px;
+  padding:15px 20px 10px 20px;
   line-height:1.4;
   position: relative; 
 }}
@@ -95,7 +95,6 @@
     font-size: 1em;
     width:95%;
     align-items: left;
-    margin:50px auto;
     font-style:italic;
     color: #555555;
     line-height:1.4;
@@ -119,8 +118,9 @@
   content: "\201E";
   color:#f9ac85;
   font-size:7em;
-  position: absolute;
-  top:220px;
+  position:absolute;
+  bottom: -50px;
+ 
   
 }}
 
