@@ -90,7 +90,7 @@
   position: relative; 
 }}
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
   .otro-blockquote{
     font-size: 1em;
     width:95%;
@@ -99,7 +99,7 @@
     color: #555555;
     line-height:1.4;
     position: relative;
-  }}
+  }} */
 
 
 @media (min-width: 769px) {
@@ -125,7 +125,7 @@
 }}
 
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
   .otro-blockquote::before{
     font-family:'Times New Roman', Times, serif;
     content: "\201C";
@@ -145,4 +145,56 @@
     top:350px;
     left: 250px;
     
-  }}
+  }} */
+
+
+  @media (max-width: 769px) {
+    .nuevo-blockquote{
+      font-size: 1em;
+      width:95%;
+      align-items: left;
+      font-style:italic;
+      color: #555555;
+      line-height:1.4;
+      position: relative;
+    }}
+  
+
+
+      @media (max-width: 769px) {
+      .nuevo-blockquote::after{
+        font-family:'Times New Roman', Times, serif;
+        content: "\201E";
+        color:#f9ac85;
+        font-size:7em;
+        position: absolute;
+        top:-110px;
+        left: 250px;
+        
+      }}
+    
+
+
+      @media (max-width: 769px) {
+        .blockquoteMobile{
+          font-size: 1em;
+          width:95%;
+          align-items: left;
+          font-style:italic;
+          color: #555555;
+          line-height:1.4;
+          position: relative;
+        }}
+      
+    
+        @media (max-width: 769px) {
+          .blockquoteMobile::before{
+            font-family:'Times New Roman', Times, serif;
+            content: "\201C";
+            color:#f9ac85;
+            font-size:7em;
+            position: absolute;
+            left: -40px;
+            top:-50px;
+          }}
+ 
