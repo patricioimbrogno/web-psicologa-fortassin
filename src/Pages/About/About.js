@@ -58,8 +58,9 @@ const About = () => {
           </Typography>
           <span className={`content ${toggledClass} blockquoteMobile`}></span>
           <Typography
-            sx={{ color: "#545454" }}
+            sx={{ color: "#545454"}}
             align="center"
+            fontStyle='italic' 
             variant="subtitle2"
             className={`content ${toggledClass} otro-blockquote`}
           >
