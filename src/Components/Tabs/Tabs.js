@@ -94,8 +94,8 @@ export default function BasicTabs() {
         <Typography align="center" sx={{ color: "#545454" }}>
           La evaluación para el diagnóstico de autismo consiste en 4 encuentros:
         </Typography>
-        <ol>
-          <li style={{ color: "#545454" }}>
+        <ol style={{paddingLeft: '30px'}}>
+          <li style={{ color: "#545454", paddingTop:'20px' }}>
             Entrevista inicial con la familia
           </li>
           <li style={{ color: "#545454" }}>Evaluación Ados-2</li>
